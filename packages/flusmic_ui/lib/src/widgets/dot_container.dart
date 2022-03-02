@@ -14,8 +14,8 @@ class DotContainer extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
         Text(
-          "• ",
-          style: TextStyle(fontSize: 16),
+          "\u2022 ",
+          style: TextStyle(fontSize: 20),
         ),
         Expanded(
           child: child,
