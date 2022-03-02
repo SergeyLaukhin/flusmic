@@ -15,7 +15,7 @@ class DotContainer extends StatelessWidget {
       children: <Widget>[
         Text(
           "\u2022 ",
-          style: TextStyle(fontSize: 20),
+          style: TextStyle(fontWeight: FontWeight.bold),
         ),
         Expanded(
           child: child,
