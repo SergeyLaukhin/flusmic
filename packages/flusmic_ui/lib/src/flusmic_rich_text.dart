@@ -1,4 +1,5 @@
 import 'package:flusmic/flusmic.dart';
+import 'package:flusmic_ui/src/widgets/InnerListItem.dart';
 import 'package:flusmic_ui/src/widgets/rich_image.dart';
 import 'package:flusmic_ui/src/widgets/rich_text.dart';
 import 'package:flutter/material.dart';
@@ -106,7 +107,17 @@ class FlusmicRichText extends StatelessWidget {
               loadingWidget: loadingWidget,
             ),
             embed: (value) => Container(),
-            listItem: (value) => Container(),
+            listItem: (value) => InnerListItem(
+              field,
+              bottomSeparation: bottomSeparation,
+              headline1Style: headline1Style,
+              headline2Style: headline2Style,
+              headline3Style: headline3Style,
+              headline4Style: headline4Style,
+              headline5Style: headline5Style,
+              headline6Style: headline6Style,
+              paragraphStyle: paragraphStyle,
+            ),
             orderedListItem: (value) => Container(),
           )
       ],
