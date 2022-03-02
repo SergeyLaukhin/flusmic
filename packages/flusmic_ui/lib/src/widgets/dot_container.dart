@@ -13,7 +13,10 @@ class DotContainer extends StatelessWidget {
     return Row(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
-        Text("• "),
+        Text(
+          "• ",
+          style: TextStyle(fontSize: 16),
+        ),
         Expanded(
           child: child,
         ),
