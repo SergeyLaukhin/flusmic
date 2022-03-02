@@ -35,17 +35,17 @@ class InnerRichImage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.only(bottom: bottomSeparation),
-      child: ExtendedImage.network(
+      child: Image.network(
         image.url,
         fit: fit,
         height: image.dimensions.height,
         width: image.dimensions.width,
-        loadStateChanged: (state) {
+       /* loadStateChanged: (state) {
           if (state.extendedImageLoadState == LoadState.loading) {
             return loadingWidget ?? Container();
           }
           return null;
-        },
+        },*/
       ),
     );
   }
