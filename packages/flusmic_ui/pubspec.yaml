@@ -6,24 +6,28 @@ issue_tracker: https://github.com/PixelaGt/flusmic/issues
 homepage: https://github.com/PixelaGt/flusmic
 
 environment:
-  sdk: '>=2.12.0 <3.0.0'
+  sdk: ">=2.12.0 <3.0.0"
 
 dependencies:
-  common_bloc: ^4.2.0
-  extended_image: ^5.1.2
-  flusmic: ^3.1.0
   flutter:
     sdk: flutter
-  freezed_annotation: ^0.14.3
+
+  common_bloc:
+    git:
+      url: https://github.com/SergeyLaukhin/common_bloc.git
+      ref: a80e3469ea55aaad915a3eef338df156b1065161
+
+  extended_image: ^6.0.1
+  flusmic: ^3.2.0
+
+  freezed_annotation: ^1.1.0
   state_notifier: ^0.7.1
 
 dev_dependencies:
-  build_runner: ^2.1.2
   flutter_test:
     sdk: flutter
-  freezed: ^0.14.5
-  mocktail: ^0.1.4
-  very_good_analysis: ^2.3.0
 
-flutter:
-  #
+  build_runner: ^2.1.7
+  freezed: ^1.1.1
+  mocktail:
+  very_good_analysis: ^2.4.0
