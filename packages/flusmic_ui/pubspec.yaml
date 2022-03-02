@@ -18,6 +18,7 @@ dependencies:
       ref: a80e3469ea55aaad915a3eef338df156b1065161
 
   extended_image: ^6.0.1
+  flutter_svg: ^1.0.3
   flusmic: ^3.2.0
 
   freezed_annotation: ^1.1.0

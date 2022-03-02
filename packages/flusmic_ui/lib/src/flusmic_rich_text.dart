@@ -101,6 +101,7 @@ class FlusmicRichText extends StatelessWidget {
             ),
             image: (value) => InnerRichImage(
               value,
+              type: value.url.toLowerCase().contains(".svg") ? ImageType.SVG : ImageType.DEFAULT,
               bottomSeparation: bottomSeparation,
               failWidget: failWidget,
               fit: imageFit,

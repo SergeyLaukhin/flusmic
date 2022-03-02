@@ -1,6 +1,12 @@
 import 'package:extended_image/extended_image.dart';
 import 'package:flusmic_ui/flusmic_ui.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+
+enum ImageType {
+  DEFAULT,
+  SVG,
+}
 
 ///InnerRichImage
 ///
@@ -14,6 +20,7 @@ class InnerRichImage extends StatelessWidget {
     this.failWidget,
     this.fit = BoxFit.cover,
     this.loadingWidget,
+    this.type = ImageType.DEFAULT,
   }) : super(key: key);
 
   ///Separation between elements
@@ -31,22 +38,31 @@ class InnerRichImage extends StatelessWidget {
   ///Widget to show while loading image
   final Widget? loadingWidget;
 
+  final ImageType type;
+
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.only(bottom: bottomSeparation),
-      child: Image.network(
-        image.url,
-        fit: fit,
-        height: image.dimensions.height,
-        width: image.dimensions.width,
-       /* loadStateChanged: (state) {
-          if (state.extendedImageLoadState == LoadState.loading) {
-            return loadingWidget ?? Container();
-          }
-          return null;
-        },*/
-      ),
+      child: type == ImageType.DEFAULT
+          ? ExtendedImage.network(
+              image.url,
+              fit: fit,
+              height: image.dimensions.height,
+              width: image.dimensions.width,
+              loadStateChanged: (state) {
+                if (state.extendedImageLoadState == LoadState.loading) {
+                  return loadingWidget ?? Container();
+                }
+                return null;
+              },
+            )
+          : SvgPicture.network(
+              image.url,
+              fit: fit,
+              height: image.dimensions.height,
+              width: image.dimensions.width,
+            ),
     );
   }
 }
