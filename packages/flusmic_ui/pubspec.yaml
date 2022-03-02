@@ -12,10 +12,7 @@ dependencies:
   flutter:
     sdk: flutter
 
-  common_bloc:
-    git:
-      url: https://github.com/SergeyLaukhin/common_bloc.git
-      ref: a80e3469ea55aaad915a3eef338df156b1065161
+  common_bloc: ^4.2.0
 
   extended_image: ^6.0.1
   flutter_svg: ^1.0.3

@@ -151,12 +151,10 @@ packages:
   common_bloc:
     dependency: "direct main"
     description:
-      path: "."
-      ref: a80e3469ea55aaad915a3eef338df156b1065161
-      resolved-ref: a80e3469ea55aaad915a3eef338df156b1065161
-      url: "https://github.com/SergeyLaukhin/common_bloc.git"
-    source: git
-    version: "4.2.0"
+      name: common_bloc
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "4.2.1"
   convert:
     dependency: transitive
     description:
