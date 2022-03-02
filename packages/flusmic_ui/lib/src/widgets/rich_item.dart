@@ -1,4 +1,5 @@
 import 'package:flusmic_ui/flusmic_ui.dart';
+import 'package:flusmic_ui/src/widgets/dot_container.dart';
 import 'package:flusmic_ui/src/widgets/rich_text.dart';
 import 'package:flutter/material.dart';
 
@@ -8,17 +9,17 @@ import 'package:flutter/material.dart';
 class InnerListItem extends StatefulWidget {
   ///Default constructor
   const InnerListItem(
-      this.text, {
-        Key? key,
-        this.bottomSeparation = 8.0,
-        this.headline1Style,
-        this.headline2Style,
-        this.headline3Style,
-        this.headline4Style,
-        this.headline5Style,
-        this.headline6Style,
-        this.paragraphStyle,
-      }) : super(key: key);
+    this.text, {
+    Key? key,
+    this.bottomSeparation = 8.0,
+    this.headline1Style,
+    this.headline2Style,
+    this.headline3Style,
+    this.headline4Style,
+    this.headline5Style,
+    this.headline6Style,
+    this.paragraphStyle,
+  }) : super(key: key);
 
   ///Text from RichText
   final Richable text;
@@ -68,16 +69,18 @@ class InnerListItem extends StatefulWidget {
 class _InnerListItemState extends State<InnerListItem> {
   @override
   Widget build(BuildContext context) {
-    return InnerRichText(
-      widget.text,
-      bottomSeparation: widget.bottomSeparation,
-      headline1Style: widget.headline1Style,
-      headline2Style: widget.headline2Style,
-      headline3Style: widget.headline3Style,
-      headline4Style: widget.headline4Style,
-      headline5Style: widget.headline5Style,
-      headline6Style: widget.headline6Style,
-      paragraphStyle: widget.paragraphStyle,
+    return DotContainer(
+      child: InnerRichText(
+        widget.text,
+        bottomSeparation: widget.bottomSeparation,
+        headline1Style: widget.headline1Style,
+        headline2Style: widget.headline2Style,
+        headline3Style: widget.headline3Style,
+        headline4Style: widget.headline4Style,
+        headline5Style: widget.headline5Style,
+        headline6Style: widget.headline6Style,
+        paragraphStyle: widget.paragraphStyle,
+      ),
     );
   }
 }
