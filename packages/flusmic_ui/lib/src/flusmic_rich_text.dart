@@ -1,5 +1,5 @@
 import 'package:flusmic/flusmic.dart';
-import 'package:flusmic_ui/src/widgets/InnerListItem.dart';
+import 'package:flusmic_ui/src/widgets/rich_item.dart';
 import 'package:flusmic_ui/src/widgets/rich_image.dart';
 import 'package:flusmic_ui/src/widgets/rich_text.dart';
 import 'package:flutter/material.dart';

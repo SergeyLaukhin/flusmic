@@ -97,6 +97,8 @@ class _InnerRichTextState extends State<InnerRichText> {
       return (widget.text as RichableHeading5).text;
     } else if (widget.text is RichableHeading6) {
       return (widget.text as RichableHeading6).text;
+    } else if (widget.text is RichableListItem) {
+      return (widget.text as RichableListItem).text;
     } else {
       return (widget.text as RichableParagraph).text;
     }
@@ -115,6 +117,8 @@ class _InnerRichTextState extends State<InnerRichText> {
       return widget.headline5Style ?? Theme.of(context).textTheme.headline5;
     } else if (widget.text is RichableHeading6) {
       return widget.headline6Style ?? Theme.of(context).textTheme.headline6;
+    } else if (widget.text is RichableListItem) {
+      return widget.paragraphStyle ?? Theme.of(context).textTheme.bodyText2;
     } else {
       return widget.paragraphStyle ?? Theme.of(context).textTheme.bodyText2;
     }
