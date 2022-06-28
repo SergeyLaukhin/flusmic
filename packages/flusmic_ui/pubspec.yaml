@@ -18,7 +18,7 @@ dependencies:
   flutter_svg: ^1.0.3
   flusmic: ^3.2.0
 
-  freezed_annotation: ^1.1.0
+  freezed_annotation: ^2.0.3
   state_notifier: ^0.7.1
 
 dev_dependencies:
@@ -26,6 +26,6 @@ dev_dependencies:
     sdk: flutter
 
   build_runner: ^2.1.7
-  freezed: ^1.1.1
+  freezed: ^2.0.3+1
   mocktail:
   very_good_analysis: ^2.4.0
